@@ -1,5 +1,5 @@
 import React from 'react'
-//import Layout from './components/Layout/layout'
+import { Route, Routes } from "react-router-dom"
 import { Layout } from './components'
 //import logo from './logo.svg'
 //import './App.css'
