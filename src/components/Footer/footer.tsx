@@ -1,5 +1,4 @@
-
-import styles from './footer.module.css'; 
+import styles from './footer.module.css'
 
 export const Footer = () => {
   return (
@@ -10,5 +9,5 @@ export const Footer = () => {
         </p>
       </footer>
     </>
-  );
-};
+  )
+}

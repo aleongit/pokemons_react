@@ -1,8 +1,6 @@
-
-import styles from './navbar.module.css'; 
+import styles from './navbar.module.css'
 
 export const Navbar = () => {
-
   return (
     <>
       <div className={styles.navbar}>
@@ -12,5 +10,5 @@ export const Navbar = () => {
         </ul>
       </div>
     </>
-  );
-};
+  )
+}

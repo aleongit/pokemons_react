@@ -11,7 +11,7 @@ function App() {
         <p>Ei React! Estic a App.tsx</p>
       </Layout>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
