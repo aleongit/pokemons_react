@@ -36,6 +36,7 @@ del “pokemon”.
 ## Get Started
 - git clone https://github.com/aleongit/pokemons_react.git
 - cd pokemons_react
+- npm install
 - npm start
 - npm run build (for create an optimized production build)
 - npm run test (for tests)
