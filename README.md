@@ -26,12 +26,15 @@ del “pokemon”.
 ## Project Steps
 - npx create-react-app pokemons_react --template typescript
 - npm install react-router-dom
+- npm install --save-dev @testing-library/react
 
 
 ## Get Started
 - git clone https://github.com/aleongit/pokemons_react.git
 - cd pokemons_react
 - npm start
+- npm run build (for create an optimized production build)
+- npm run test (for tests)
 
 
 ![Screenshot](public/img/1.png)
