@@ -10,7 +10,7 @@ export const PokemonDetail = () => {
   //console.log(id)
 
   const [data, setData]: any = useState({})
-  const [error, setError] = useState(undefined || String)
+  const [error] = useState(undefined || String)
   const [loading, setLoading] = useState(true)
 
   const fetchData = async () => {
@@ -23,7 +23,7 @@ export const PokemonDetail = () => {
 
   useEffect(() => {
     fetchData()
-  }, []) //dependències
+  },[]) //dependències
 
   if (error) {
     return <div>{error}</div>

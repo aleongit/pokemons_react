@@ -1,4 +1,4 @@
-import { Link, useSearchParams, useLocation } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { useMemo } from 'react'
 
 import styles from './pagination.module.css'
@@ -10,10 +10,9 @@ interface IPagination {
 
 export const Pagination = ({ pageCount, currentPage }: IPagination) => {
   //get paràmetre URL
-  let [searchParams, setSearchParams] = useSearchParams()
+  let [searchParams] = useSearchParams()
   const view = searchParams.get('view')
   //console.log(view)
-
   //console.log('a pagination!')
   //console.log(currentPage)
 
@@ -36,7 +35,7 @@ export const Pagination = ({ pageCount, currentPage }: IPagination) => {
           </li>
           <li>
             <Link
-              to={`?view=${view}&page=${parseInt(currentPage) - 1}`}
+              to={`?view=${view}&page=${parseInt(currentPage) > 1 ? parseInt(currentPage) - 1 : 1}`}
               className={`${styles['item']}`}
             >
               {'<'}
@@ -60,7 +59,9 @@ export const Pagination = ({ pageCount, currentPage }: IPagination) => {
         <>
           <li>
             <Link
-              to={`?view=${view}&page=${parseInt(currentPage) + 1}`}
+              to={`?view=${view}&page=${
+                parseInt(currentPage) < pageCount ? parseInt(currentPage) + 1 : pageCount
+              }`}
               className={`${styles['item']}`}
             >
               {'>'}

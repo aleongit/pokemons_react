@@ -6,7 +6,7 @@ import { Home, NotFound } from './pages'
 import { PokemonDetail } from './components'
 import reportWebVitals from './reportWebVitals'
 
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(

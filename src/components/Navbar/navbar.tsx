@@ -4,7 +4,7 @@ import styles from './navbar.module.css'
 export const Navbar = () => {
   
   //get paràmetre view de URL
-  let [searchParams, setSearchParams] = useSearchParams()
+  let [searchParams] = useSearchParams()
   const view = searchParams.get('view')
   const page = searchParams.get('page')
   //console.log(view)

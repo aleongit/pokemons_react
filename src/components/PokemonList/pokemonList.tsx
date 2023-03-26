@@ -12,7 +12,7 @@ import styles from './pokemonList.module.css'
 
 export const PokemonList = () => {
   const [data, setData] = useState([])
-  const [error, setError] = useState(undefined || String)
+  const [error] = useState(undefined || String)
   const [loading, setLoading] = useState(true)
 
   //paginate
@@ -21,7 +21,7 @@ export const PokemonList = () => {
   const [currentPage, setcurrentPage] = useState('1')
 
   //get paràmetre view de URL
-  let [searchParams, setSearchParams] = useSearchParams()
+  let [searchParams] = useSearchParams()
   let view = searchParams.get('view')
   let page = searchParams.get('page') ?? '1'
   //console.log(view)
@@ -68,7 +68,10 @@ export const PokemonList = () => {
           <div>
             <ul className={view === 'list' ? styles.list : styles.grid}>
               {data.map((pokemon: PokemonListType, index: number) => (
-                <Link to={`/pokemon/${getIdPokemon(pokemon.url)}?view=${view}&page=${page}`} key={index}>
+                <Link
+                  to={`/pokemon/${getIdPokemon(pokemon.url)}?view=${view}&page=${page}`}
+                  key={index}
+                >
                   <li
                     className={
                       view === 'list'
