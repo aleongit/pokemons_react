@@ -1,10 +1,9 @@
-import { useMemo, useState, useEffect } from 'react'
-import { getPokemonsData, PokemonListType } from '../../lib/pokemons_lib'
+import { useState, useEffect } from 'react'
+import { getPokemonsData } from '../../lib/pokemonsLib'
 import { Layout, PokemonList } from '../../components'
 import styles from './home.module.css'
 
 export const Home = () => {
-
   const [data, setData] = useState([])
   const [error, setError] = useState(undefined || String)
   const [loading, setLoading] = useState(true)
@@ -19,22 +18,21 @@ export const Home = () => {
 
   useEffect(() => {
     fetchData()
-  }, []) //dependències, per evitar bucle infinit per només cridar quan cal
+  }, []) //dependències
 
   if (error) {
-    return <div>{error}</div>;
+    return <div>{error}</div>
   }
 
   if (loading) {
-    return <div>LOADING!</div>;
+    return <div>LOADING!</div>
   }
 
   return (
     <>
       <Layout>
         <div className={styles.main}>
-          <h1>Ei React! Estic a Home</h1>
-          <PokemonList data = {data}/>
+          <PokemonList data={data} />
         </div>
       </Layout>
     </>

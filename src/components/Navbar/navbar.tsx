@@ -1,5 +1,4 @@
 import { Link, useSearchParams } from 'react-router-dom'
-import { useMemo } from 'react'
 import styles from './navbar.module.css'
 
 export const Navbar = () => {

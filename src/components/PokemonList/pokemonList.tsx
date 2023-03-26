@@ -1,5 +1,5 @@
 import { Link, useSearchParams } from 'react-router-dom'
-import { getPokemonsData, PokemonListType } from '../../lib/pokemons_lib'
+import { PokemonListType } from '../../lib/pokemonsLib'
 import styles from './pokemonList.module.css'
 
 interface iPokemonList {
@@ -23,7 +23,7 @@ export const PokemonList = ({ data }:iPokemonList) => {
             <div>
               <ul className={view === 'list' ? styles.list : styles.grid}>
                 {data.map((pokemon: PokemonListType, index: number) => (
-                  <Link to={`/${pokemon.name}`} key={index}>
+                  <Link to={`/${index + 1}`} key={index}>
                     <li
                       className={
                         view === 'list'

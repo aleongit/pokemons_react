@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 //import App from './App'
 import { Home, NotFound } from './pages'
+import { PokemonDetail } from './components'
 import reportWebVitals from './reportWebVitals'
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
@@ -13,6 +14,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path=":id" element={<PokemonDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
