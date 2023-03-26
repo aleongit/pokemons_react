@@ -1,5 +1,9 @@
 # pokemons_react
 
+A React App example with routes, pages, components, Fetching API data, URL params, Pagination, List and Grid View and Responsive styles.
+
+## TODO:
+
 Utilitzant React, implementa una solució responsive, senzilla però eficaç d’un
 llistat de “pokemons” amb paginació. Implementa també la pàgina del detall
 del “pokemon”.
