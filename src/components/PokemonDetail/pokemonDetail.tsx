@@ -7,7 +7,7 @@ import styles from './pokemonDetail.module.css'
 export const PokemonDetail = () => {
   //get id
   const { id } = useParams()
-  console.log(id)
+  //console.log(id)
 
   const [data, setData]: any = useState({})
   const [error, setError] = useState(undefined || String)
@@ -16,9 +16,8 @@ export const PokemonDetail = () => {
   const fetchData = async () => {
     //const response = await getPokemonsData()
     const response = await getPokemonData(id)
-    console.log(response)
+    //console.log(response)
     setData(response)
-    console.log('fetch data')
     setLoading(false)
   }
 
