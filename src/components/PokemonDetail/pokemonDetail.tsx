@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getPokemonData } from '../../lib/pokemonsLib'
-import { Layout } from '../../components'
+import { Layout, Loading } from '../../components'
 import styles from './pokemonDetail.module.css'
 
 export const PokemonDetail = () => {
-
   //get id
   const { id } = useParams()
   console.log(id)
@@ -32,7 +31,7 @@ export const PokemonDetail = () => {
   }
 
   if (loading) {
-    return <div>LOADING!</div>
+    return <Loading />
   }
 
   return (

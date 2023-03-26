@@ -1,5 +1,6 @@
 export * from './Layout/layout'
 export * from './Footer/footer'
 export * from './Navbar/navbar'
+export * from './Loading/loading'
 export * from './PokemonList/pokemonList'
 export * from './PokemonDetail/pokemonDetail'

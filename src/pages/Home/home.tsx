@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getPokemonsData } from '../../lib/pokemonsLib'
-import { Layout, PokemonList } from '../../components'
+import { Layout, PokemonList, Loading } from '../../components'
 import styles from './home.module.css'
 
 export const Home = () => {
@@ -25,7 +25,7 @@ export const Home = () => {
   }
 
   if (loading) {
-    return <div>LOADING!</div>
+    return <Loading />
   }
 
   return (
